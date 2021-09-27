@@ -1,7 +1,10 @@
-# Vet-Clinic-database-project
+# Vet_Clinic_Database_Project
 
 > This template should be used for database related projects at Microverse.
 > Generate your own repository, update this README and edit all files content while working on projects. You should not be adding any new files unless asked otherwise.
+
+## Table screenshot
+![Screenshot from 2021-09-27 17-32-25](https://user-images.githubusercontent.com/64914462/134929609-b56c8fec-5f04-4d9f-a62e-7283cac4e701.png)
 
 
 ## Getting Started
