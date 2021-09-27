@@ -1,10 +1,10 @@
 /*Queries that provide answers to the questions from all projects.*/
 
-select * from animals where name like '%mon%';
-select name from animals where date_of_birth between (to_date('01/01/2016','mm/dd/yyyy')) and (to_date('12/31/2019','mm/dd/yyyy'));
-select name from animals where neutered = true and escape_attempts < 3;
-select date_of_birth from animals where name = 'Agumon' or name= 'Pikachu';
-select name,escape_attempts from animals where weight_kg > 10.5;
-select * from animals where neutered = true;
-select * from animals where name != 'Gabumon';
-select * from animals where weight_kg >= 10.4 and weight_kg <= 17.3;
+SELECT * FROM animals WHERE Name LIKE '%mon%';
+SELECT Name FROM animals WHERE Date_of_birth BETWEEN (to_date('01/01/2016','mm/dd/yyyy')) AND (to_date('12/31/2019','mm/dd/yyyy'));
+SELECT Name FROM animals WHERE Neutered = true AND Escape_attempts < 3;
+SELECT Date_of_birth FROM animals WHERE Name = 'Agumon' or name= 'Pikachu';
+SELECT Name,Escape_attempts FROM animals WHERE Weight_kg > 10.5;
+SELECT * FROM animals WHERE Neutered = true;
+SELECT * FROM animals WHERE Name != 'Gabumon';
+SELECT * FROM animals WHERE Weight_kg >= 10.4 AND Weight_kg <= 17.3;
