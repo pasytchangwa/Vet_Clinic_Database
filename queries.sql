@@ -57,3 +57,28 @@ SELECT Neutered, AVG(Escape_attempts) FROM animals
 WHERE Date_of_birth BETWEEN (to_date('01/01/1990','mm/dd/yyyy')) AND (to_date('12/31/2000','mm/dd/yyyy'))
 GROUP BY Neutered;
 
+SELECT animals.Name,owner_id,full_name FROM animals
+JOIN owners ON owners.id = anmals.owner_id
+WHERE owners.id = 4;
+
+SELECT animals.Name,species_id,species.name FROM animals
+JOIN species ON species.id = animals.species_id
+WHERE species.id = 1;
+
+SELECT animals.name,owner_id,full_name FROM animals
+JOIN owners ON owners.id = animals.owner_id;
+
+SELECT animals.name,species_id,species.name FROM animals
+JOIN species ON species.id = animals.species_id;
+
+SELECT animals.name,owner_id,full_name FROM animals
+JOIN owners ON owners.id = animals.owner_id
+where name LIKE '%mon' AND owners.id = 2;
+
+SELECT animals.name,owner_id,full_name FROM animals
+JOIN owners ON owners.id = animals.owner_id
+WHERE Escape_attempts = 0 AND owners.id = 5;
+
+SELECT animals.name,COUNT(owner_id),full_name FROM animals
+JOIN owners ON owners.id = animals.owner_id;
+
