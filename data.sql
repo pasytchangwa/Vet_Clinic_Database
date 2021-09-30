@@ -38,3 +38,11 @@ WHERE Name = 'Charmander' or Name = 'Squirtle' or Name = 'Blossom';
 UPDATE animals
 SET owner_id = 5
 WHERE Name = 'Angemon' or Name = 'Boarmon';
+
+INSERT INTO vets (name,age,date_of_graduation) VALUES('Willian Tatcher', 45, (to_date('04/23/2000','mm/dd/yyyy')) ),('Maisy Smith', 26, (to_date('01/17/2019','mm/dd/yyyy')) ),('Stephanie Mendez', 64, (to_date('05/04/1981','mm/dd/yyyy')) ),('Jack Harkness', 38, (to_date('06/08/2008','mm/dd/yyyy')) );
+
+INSERT INTO specialization VALUES(1, 1 ),(1, 3 ), (2, 3 ),(2, 4 );
+
+INSERT INTO visits (animals_id, vet_id, date) VALUES (1, 1, (to_date('05/24/2020','mm/dd/yyyy')) ), (1, 3, (to_date('07/22/2020','mm/dd/yyyy')) ),(2, 4, (to_date('02/02/2021','mm/dd/yyyy')) ),(3, 2, (to_date('01/05/2020','mm/dd/yyyy')) ),(3, 2, (to_date('03/08/2020','mm/dd/yyyy')) ),(3, 2, (to_date('05/14/2020','mm/dd/yyyy')) ),(4, 3, (to_date('05/04/2021','mm/dd/yyyy')) ),(5, 4, (to_date('02/24/2021','mm/dd/yyyy')) ),(7, 2, (to_date('12/21/2019','mm/dd/yyyy')) ),(7, 1, (to_date('08/10/2020','mm/dd/yyyy')) ),(7, 2, (to_date('04/07/2021','mm/dd/yyyy')) ),(7, 3, (to_date('09/29/2019','mm/dd/yyyy')) ),(8, 4, (to_date('10/03/2020','mm/dd/yyyy')) ),(8, 4, (to_date('11/04/2020','mm/dd/yyyy')) ),(9, 2, (to_date('01/24/2019','mm/dd/yyyy')) ),(9, 2, (to_date('05/15/2019','mm/dd/yyyy')) ),(9, 2, (to_date('02/27/2020','mm/dd/yyyy')) ),(9, 2, (to_date('08/03/2020','mm/dd/yyyy')) ),(10, 3, (to_date('05/24/2020','mm/dd/yyyy')) ),(10, 1, (to_date('01/11/2021','mm/dd/yyyy')) );
+
+
