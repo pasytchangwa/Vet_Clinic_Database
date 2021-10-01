@@ -36,3 +36,31 @@ ALTER TABLE animals
 ADD constraint fk_owner
 FOREIGN KEY(owner_id)
 REFERENCES owners (id);
+
+CREATE TABLE vets(
+    id integer GENERATED ALWAYS AS IDENTITY,
+    name VARCHAR(100),
+    age integer,
+    date_of_graduation date,
+    PRIMARY KEY(id)
+);
+
+CREATE TABLE specialization(
+    specie_id integer not null,
+    vets_id int not null,
+    FOREIGN KEY(specie_id) REFERENCES species (id),
+    FOREIGN KEY(vets_id) REFERENCES vets (id),
+    PRIMARY KEY(specie_id, vets_id)
+);
+
+CREATE TABLE visits(
+    animals_id integer not null,
+    vet_id int not null,
+    date date,
+    id integer GENERATED ALWAYS AS IDENTITY,
+    FOREIGN KEY(animals_id) REFERENCES animals (id),
+    FOREIGN KEY(vet_id) REFERENCES vets (id),
+    PRIMARY KEY(id)
+);
+
+
