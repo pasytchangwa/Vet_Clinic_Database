@@ -63,4 +63,16 @@ CREATE TABLE visits(
     PRIMARY KEY(id)
 );
 
+ALTER TABLE owners ADD COLUMN email VARCHAR(120);
+
+-- optimize visits table by creating index column for animals_id
+
+CREATE INDEX animals_id_asc ON visits(animals_id ASC);
+
+-- optimize visits table by creating index column for vet_id
+
+CREATE INDEX vet_id_asc ON visits(vet_id ASC);
+-- optimize owners table by creating index column for email
+
+CREATE INDEX owners_email_asc ON owners(email ASC);
 
