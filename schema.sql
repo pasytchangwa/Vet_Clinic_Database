@@ -53,6 +53,8 @@ CREATE TABLE specialization(
     PRIMARY KEY(specie_id, vets_id)
 );
 
+ALTER TABLE specialization ADD column ID int;
+
 CREATE TABLE visits(
     animals_id integer not null,
     vet_id int not null,
